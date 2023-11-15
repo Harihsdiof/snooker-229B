@@ -23,7 +23,7 @@ public class Ball : MonoBehaviour
     public int Point { get { return point; } }
 
     [SerializeField]
-    private BallColor ballColor;
+    private BallColor Color;
 
     [SerializeField]
     private MeshRenderer rd;
@@ -55,16 +55,22 @@ public class Ball : MonoBehaviour
                 break;
             case BallColor.Brown:
                 point = 4;
-                rd.material.color = new Color32(212, 53, 17, 255);
+                rd.material.color = Color.brown;
                 break;
             case BallColor.Blue:
                 point = 5;
                 rd.material.color = Color.blue;
                 break;
             case BallColor.Pink:
-                point = 5;
-                rd.material.color = new Color(255, 98, 193, 255);
+                point = 6;
+                rd.material.color = Color.pink;
                 break;
+            case BallColor.Black:
+                point = 7;
+                rd.material.color = Color.black;
+                break;
+
+
         }
     }
 }
